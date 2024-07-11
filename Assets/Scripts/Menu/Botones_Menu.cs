@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class Botones_Menu : MonoBehaviour
@@ -13,6 +14,5 @@ public class Botones_Menu : MonoBehaviour
    public void Salir()
     {
         Application.Quit();
-        Debug.Log("Si funciona salir");
     }
 }
