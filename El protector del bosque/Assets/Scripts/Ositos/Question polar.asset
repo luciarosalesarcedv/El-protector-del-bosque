@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5771972cd2520654ab6a80e98bd22072, type: 3}
+  m_Name: Question polar
+  m_EditorClassIdentifier: 
+  question: "\xBFQu\xE9 porcentaje de la dieta de un oso polar est\xE1 compuesto
+    por grasa?"
+  possibleAnswers:
+  - Aproximadamente el 10%
+  - Aproximadamente el 50%
+  - Aproximadamente el 90%
+  correctAnswer: 2

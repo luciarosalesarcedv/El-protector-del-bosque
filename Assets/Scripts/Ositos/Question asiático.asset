@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5771972cd2520654ab6a80e98bd22072, type: 3}
+  m_Name: "Question asi\xE1tico"
+  m_EditorClassIdentifier: 
+  question: "\xBFCu\xE1l es otro nombre com\xFAn para el oso negro asi\xE1tico?"
+  possibleAnswers:
+  - Oso del Himalaya.
+  - Oso Otaku.
+  - Oso Panda sin manchas.
+  correctAnswer: 0
