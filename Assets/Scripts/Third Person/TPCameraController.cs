@@ -44,13 +44,16 @@ public class TPCameraController : MonoBehaviour
 
             xRotation = Mathf.Clamp(xRotation, -xLimit, xLimit);
 
-            transform.rotation = Quaternion.Euler(xRotation, yRotation, 0);
+            Quaternion normalRot = Quaternion.Euler(xRotation, yRotation, 0);
+            transform.rotation = normalRot;
+
         }else
         {
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
         }
        
-        transform.position = target.position + Vector3.up * verticalOffset - transform.forward * characterDistance;
+        Vector3 normalPos = target.position + Vector3.up * verticalOffset - transform.forward * characterDistance;
+        transform.position = normalPos;
     }
 }

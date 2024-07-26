@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SocialPlatforms.Impl;
 
 public class MalayoTrigger : MonoBehaviour
@@ -15,10 +16,12 @@ public class MalayoTrigger : MonoBehaviour
 
     private bool playerInTrigger = false;
 
+    public Button continueButton;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        continueButton.onClick.AddListener(ContinueGame);
     }
 
     void OnTriggerEnter(Collider other)

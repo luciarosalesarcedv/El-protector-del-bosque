@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SocialPlatforms.Impl;
 
 public class AmericanoTrigger : MonoBehaviour
@@ -13,15 +14,15 @@ public class AmericanoTrigger : MonoBehaviour
     public GameManager gm;
     public Question question;
 
+    public ParticleSystem ps;
+
+    public Button continueButton;
+
     private bool playerInTrigger = false;
 
-    public AudioSource src;
-    public AudioClip sfx1, sfx2;
-
-    // Start is called before the first frame update
     void Start()
     {
-        
+        continueButton.onClick.AddListener(ContinueGame);
     }
     void OnTriggerEnter(Collider other)
     {
@@ -46,14 +47,12 @@ public class AmericanoTrigger : MonoBehaviour
         if (isCorrect)
         {
             gm.HandleCorrectAnswer();
-            src.clip = sfx1;
-            src.Play();
+            
         }
         else
         {
             gm.HandleWrongAnswer();
-            src.clip = sfx2;
-            src.Play();
+            
         }
     }
     public void ContinueGame()

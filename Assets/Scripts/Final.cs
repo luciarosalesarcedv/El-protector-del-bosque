@@ -9,6 +9,8 @@ public class Final : MonoBehaviour
     public GameManager gm;
     public GameObject final;
 
+    public AudioSource srcWin;
+
 
     // Start is called before the first frame update
     void Start()
@@ -27,6 +29,7 @@ public class Final : MonoBehaviour
         if (gm.score == 3)
         {
             final.SetActive(true);
+            srcWin.Play();
             Debug.Log("tengo 3 pedazos de miel");
         }
         else

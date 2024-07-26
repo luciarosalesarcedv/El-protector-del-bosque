@@ -48,6 +48,20 @@ AudioMixerEffectController:
   m_SendTarget: {fileID: 0}
   m_EnableWetMix: 0
   m_Bypass: 0
+--- !u!244 &-134271140798074373
+AudioMixerEffectController:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_EffectID: b0646b53653f048479c60494d061a9c1
+  m_EffectName: Attenuation
+  m_MixLevel: f29171e864b73514295cf280d6e72034
+  m_Parameters: []
+  m_SendTarget: {fileID: 0}
+  m_EnableWetMix: 0
+  m_Bypass: 0
 --- !u!241 &24100000
 AudioMixerController:
   m_ObjectHideFlags: 0
@@ -69,6 +83,7 @@ AudioMixerController:
     - 8c2a2b3576659894ab9c44c631a453fd
     - 087c3f05f4e345048aa3f93fface59d2
     - b6221f5d7f8b45148a8a719f6da1a7e7
+    - 5b1d176a1b55da34f844c7cf29a19219
     name: View
   m_CurrentViewIndex: 0
   m_TargetSnapshot: {fileID: 24500006}
@@ -84,6 +99,7 @@ AudioMixerGroupController:
   m_Children:
   - {fileID: 6092315224527901085}
   - {fileID: 312361307582754208}
+  - {fileID: 6849381694468672113}
   m_Volume: 12e73ff67499e5d4884606cf9e948d01
   m_Pitch: 9eed72fb3b2f4b44faeec932b9dc1a0c
   m_Send: 00000000000000000000000000000000
@@ -117,7 +133,9 @@ AudioMixerSnapshotController:
   m_AudioMixer: {fileID: 24100000}
   m_SnapshotID: 9868e666c3965c94abe790055c87ed38
   m_FloatValues:
-    8cff545ee0bb78e4aa95984cfac2e3f2: 0.13552584
+    7b8182340a3a75b4a912bf48f460983d: -9.332112
+    abd997dd7b609c742a676c8188f34253: -2.8722944
+    8cff545ee0bb78e4aa95984cfac2e3f2: -9.332112
   m_TransitionOverrides: {}
 --- !u!243 &312361307582754208
 AudioMixerGroupController:
@@ -212,6 +230,25 @@ AudioMixerGroupController:
   m_Send: 00000000000000000000000000000000
   m_Effects:
   - {fileID: -8787306746035584277}
+  m_UserColorIndex: 0
+  m_Mute: 0
+  m_Solo: 0
+  m_BypassEffects: 0
+--- !u!243 &6849381694468672113
+AudioMixerGroupController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Pisadas
+  m_AudioMixer: {fileID: 24100000}
+  m_GroupID: 5b1d176a1b55da34f844c7cf29a19219
+  m_Children: []
+  m_Volume: 7b8182340a3a75b4a912bf48f460983d
+  m_Pitch: 6ef2fddefdf91594cae88db9f541f470
+  m_Send: 00000000000000000000000000000000
+  m_Effects:
+  - {fileID: -134271140798074373}
   m_UserColorIndex: 0
   m_Mute: 0
   m_Solo: 0

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SocialPlatforms.Impl;
 
 public class PolarTrigger : MonoBehaviour
@@ -15,13 +16,15 @@ public class PolarTrigger : MonoBehaviour
 
     private bool playerInTrigger = false;
 
+    public Button continueButton;
+
     public AudioSource src;
     public AudioClip sfx1, sfx2;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        continueButton.onClick.AddListener(ContinueGame);
     }
 
     void OnTriggerEnter(Collider other)

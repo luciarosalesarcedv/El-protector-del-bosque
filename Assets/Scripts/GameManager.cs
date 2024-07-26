@@ -26,14 +26,17 @@ public class GameManager : MonoBehaviour
     public Button retryButton;
     public Button continueButton;
 
-    
+    public AudioSource srcCorrecto;
+    public AudioSource srcIncorrecto;
+
+    public ParticleSystem ps;
 
     void Start()
     {
 
         triviaButton.onClick.AddListener(ShowTrivia);
         retryButton.onClick.AddListener(RetryTrivia);
-        continueButton.onClick.AddListener(americanoTrigger.ContinueGame);
+        
         HideAllDialogs();
 
     }
@@ -52,12 +55,15 @@ public class GameManager : MonoBehaviour
 
         questionUI.SetActive(false);
         correctAnswerDialog.SetActive(true);
+        
 
     }
     public void HandleWrongAnswer()
     {
         questionUI.SetActive(false);
         wrongAnswerDialog.SetActive(true);
+        
+    
     }
     public void RetryTrivia()
     {
@@ -108,12 +114,17 @@ public class GameManager : MonoBehaviour
             correctAnswerDialog.SetActive(true);
             score += 1;
             scoreText.text = "x " + score;
+            srcCorrecto.Play();
+            ps.Play();
             Debug.Log(scoreText);
+
         }
         else
         {
             //animación triste del osito
+            srcIncorrecto.Play();
             wrongAnswerDialog.SetActive(true);
+
         }
     }
 }
